@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<a href="bom学习.html">了解</a>
+	</head>
+	<body  onload="gettime()">
+		
+		
+		<!--
+        	作者：offline
+        	时间：2018-03-30
+        	描述：
+        	bom的三种弹框方式
+        	
+        	
+        -->
+        
+        <script>
+        	
+        	function a1(){
+        		alert("我是alert");
+        	}
+        	function  a2(){
+        		var a=confirm("确认退出吗?");
+        		alert(a);//确定是  true，取消是false;
+        	}
+        	function a3(){
+        		window.prompt("你确定？？");
+        	}
+        	function time(){
+        		alert("2222222");
+        	}
+        	//window.setTimeout("time()",2000);//间隔调用;  //ms
+        	var a=window.setInterval("gettime()",1000);//每隔两秒调用方法;//ms为单位
+        	function gettime(){
+        		var a=new Date();
+        		document.getElementById("ap").innerHTML=a.toLocaleString();
+        	}
+        	function stop1(){
+        		window.clearInterval(a);
+        	}
+        	  
+        </script>
+      
+        <input type="button"onclick="a1()"value="测试一"/>
+        <input type="button" onclick="a2()"value="测试二"/>
+         <input type="button"onclick="a3()"value="测试三" />
+         <span id="ap"></span>
+         <input type="button"onclick="stop1()"value="停止时间" />
+</body>
+</html>

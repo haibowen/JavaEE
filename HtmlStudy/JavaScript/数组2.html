@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			//动态改变数组长度
+			function test1(){
+				var arr =new Array(1,2,3,4,5,6);
+				alert(arr);
+				arr.length=10;
+				alert(arr);
+			}
+			function test2(){
+				var arr=new Array(1,2,3,4,5,6,6);
+				for (var i=0;i<=arr.length;i++){
+					alert(arr[i]);
+				}
+			}
+			
+		function test3(){
+			var arr=[1,2,3,5,6,6];
+			for(var i  in arr){
+				alert(arr[i]);
+				
+			}
+			
+		}
+		function test4(){
+			var arr=[1,2,3,4,5,6];
+			//pop的使用
+			arr.pop();
+			alert(arr);
+			arr.push("hello java");
+			alert(arr);
+		}
+		//test3();
+		test4();
+		</script>
+		<input type="button"onclick="test1()"value="测试数组的遍历" />
+		<input type="button"onclick="test2()"value="测试二" />
+	</body>
+</html>

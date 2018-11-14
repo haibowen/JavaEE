@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+        	作者：offline
+        	时间：2018-03-28
+        	描述：声明数组的四个方法：
+        	var 
+        -->
+		
+		<script>
+			//声明方式一
+			
+			function arr1(){
+				
+				var arr=new Array();
+				alert(arr);
+			}
+			//声明方式2
+			function arr2(){
+				var arr=new Array(5);//数组的长度
+				alert(arr.length);
+			}
+			//声明方式3
+			function arr3(){
+				var arr=new Array(1 ,2,3,4,5,6);
+				alert(arr)
+			}
+			function  arr4() {
+				var arr=[1,2,3,4,56,789];
+				alert(arr);
+			}
+			function test(){
+				var arr=[];
+				arr[0]=1;
+				arr[1]="123";
+				arr[2]=true;
+				arr[3]=new Date();
+				
+				arr[10]=10;
+				alert(arr);
+				alert(arr[5]);
+				
+				
+			}
+			
+			
+		</script>
+		<input type="button" onclick="test()" value="数组的使用" />
+		<input type="button" onclick="arr1() " value=" 数组声明一" />
+		<input type="button"onclick="arr2()"value="数组声明二" />
+		<input type="button" onclick="arr3()"value="数组声明三" />
+		<input type="button"onclick="arr4()" value=" 数组声明四" />
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			
+		function  a1(){
+			var d=document.getElementById("div1")
+			//d.childNodes;
+			//alert(d.childNodes.length);// 空格也算子节点   所以是7；
+			alert(d.childNodes[0]);
+			
+		}
+		function a2(){
+			var a=document.getElementById("in1");
+			alert(a.parentNode);
+		}
+		function a3(){
+			var a=document.getElementById("in1");
+			//alert(a.nextSibling.nextSibling);//获得下一个节点
+			alert(a.previousSibling);
+		}
+		//操作节点的方法
+		function a4(){
+			var a=document.getElementById("in1");
+			var b=a.name;
+			a.type="button";
+			a.value="haibo";
+			//alert(a);
+			
+		}
+		</script>
+		
+		<div id="div1">
+		篮球<input type="checkbox" id="in1"name="inp"/>
+		足球<input  type="checkbox" name="inp"/>	
+		台球<input type="checkbox" name="inp" />
+		</div>
+		<input type="button"onclick="a1()"value="获得子节点" />
+		<input type="button"onclick="a2()"value="获得父节点" />
+		<input type="button"onclick="a3()"value="获得下一个节点" />
+		<input type="button"onclick="a4()"value="应用节点的属性" />
+		
+	</body>
+</html>

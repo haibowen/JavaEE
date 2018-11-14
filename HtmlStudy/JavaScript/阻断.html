@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			
+			function test(){
+				alert("我是onclick")
+				return false;
+			}
+		</script>
+		<a href="javaScript:test()">点我测试</a>
+		<!--
+        	作者：offline
+        	时间：2018-03-30
+        	描述：a标签执行js代码
+        	
+        	事件阻断机制  加入return;
+        -->
+		
+		
+		<a href="event.html" onclick="return test()"> 点我测试</a>
+	</body>
+</html>

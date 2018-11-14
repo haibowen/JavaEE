@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			
+			div{
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+		<script>
+			function move1(ev){
+				var x=ev.pageX||ev.x;
+				var y=ev.pageY||ev.y;
+				alert(x+"+"+y);
+				
+			}
+			function up01(ev){
+				
+				alert(ev.keyCode);
+				
+			}
+			
+		</script>
+	</head>
+	<body>
+		
+		
+		<div onmousemove="move1(event)"><br /><br />
+		<br />
+		<br /><br /><br /><br /><br /><br />
+		<br /><br /><br />
+		<br />
+		
+		<br />
+		
+		<br /><br /><br />
+			<input type="text" onkeyup="up01(event)" /><br />
+			
+			
+			
+		</div>
+	</body>
+</html>

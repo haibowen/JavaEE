@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			
+			td{
+				width: 150px;
+			}
+			tr{
+				height: 100px;
+			}
+		</style>
+		<script>
+			function a1(th){
+				var a=document.getElementById("tb");
+				var b=th.parentNode.parentNode;
+				//a.removeChild(b);//不能用这种方法
+				//alert(th.parentNode.parentNode);
+				var c=b.rowIndex;
+				a.deleteRow(c);
+				
+			}
+			//添加节点的方法
+			function a2(){
+				//获得table表格对象
+				var a=document.getElementById("tb");
+				//创建一个tr对象
+				var b= document.createElement("tr");
+				//创建一个td对象
+				var c= document.createElement("td");
+				c.innerHTML="<input type='text' onblur='later(this)'/>"
+				var d= document.createElement("td");
+				d.innerHTML="<input type='text'  onblur='later(this)'/>"
+				var e= document.createElement("td");
+				//e.innerHTML="<input type='button'value='增加' />"+"<input type='button'value='增加' />"+"<input type='button'value='增加' />";
+				e.innerHTML="<input type='button'onclick='a2()'value='添加'/>"+"<input type='button'onclick='a1(this)'value='删除' />"+"<input type='button'onclick='a3(this)'value='修改' />"
+				a.appendChild(b);
+				 b.appendChild(c);
+				b.appendChild(d);
+				b.appendChild(e);
+				
+				
+				
+				
+				
+				//var f=th.parentNode.parentNode;
+				//a.removeChild(b);//不能用这种方法
+				//alert(th.parentNode.parentNode);
+				//var c=b.rowIndex;
+				//a.insertRow(c);
+				
+			}
+			
+			
+			function later(th){
+				var a=th.value;
+			    th.parentNode.innerHTML=a;
+			}
+			function a3(th){
+				//var a =th.value;
+				//a.remove(th.parentNode.innerHTML);
+				var a=th.parentNode.parentNode;
+				//获得所有单元格的集合
+				var b=a.cells;
+				b[1].innerHTML="<input type='text' onblur='later(this)' value='"+b[1].innerHTML+"'/>";
+				
+				 
+			}
+		</script>
+	</head>
+	<body>
+		
+		<table  border="1px"align="center" id="tb">
+			<tr>
+				<td>书名</td>
+				<td>价格</td>
+				<td>操作</td>
+			</tr>
+			<tr>
+				<td>java</td>
+				<td>12</td>
+				<td>
+					<input type="button"onclick="a2()"value="添加" />
+					<input type="button"onclick="a1(this)"value="删除" />
+					<input type="button"onclick="a3(this)"value="修改" />
+				</td>
+			</tr>
+			<tr>
+				<td>python</td>
+				<td>123</td>
+				<td>
+					
+					<input type="button"onclick="a2()"value="添加" />
+					<input type="button"onclick="a1(this)"value="删除"  />
+					<input type="button"onclick="a3(this)"value="修改" />
+				</td>
+			</tr>
+		</table>	
+		
+		
+	</body>
+</html>

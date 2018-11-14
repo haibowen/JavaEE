@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+		//获得节点的对象的方法
+		//按方法1  通过标签名字
+		//方法2通过 标签id
+        //方法3通过			
+			function a1(){
+				//获得元素对象的id
+				var div=document.getElementById("tes1");
+				alert(div);
+				
+				
+			}
+			function a2(){
+				var a= document.getElementsByTagName("input");
+				alert(a.length);
+			}
+			function a3(){
+			var a=	document.getElementsByName("inp");
+			   alert(a.length);
+			  }
+		</script>
+		
+		<div id="tes1"></div>
+		<input type="button"onclick="a1()"value="点击对象"/>
+		<input type="button"onclick="a2()"value="id测试"/>
+		<input type="button"onclick="a3()"value="name测试"/>
+		点解对象二<input type="checkbox" value="点解对象二" name="inp"/>
+		点解对象三<input type="checkbox" value="点解对象三"name="inp"/>
+		点解对象四<input type="checkbox" value="点解对象四"name="inp"/>
+	</body>
+</html>

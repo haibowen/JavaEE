@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			
+			
+			function a(){
+				var a1=window.location.href;//、cookies
+				var a2=window.location.hostname;
+				var a3=window.location.port;
+				var a4=window.location.pathname;
+				alert(a1+"    "+a2+a3+a4);
+			}
+			
+			
+			function a2(){
+				var h1=window.screen.height;
+				var h2=window.screen.width;
+				alert(h1+"......"+h2)
+			}
+			function a3(){
+				window.history.back();
+			}
+			function na(){
+				alert(window.navigator.userAgent)
+			}
+		</script>
+		<input type="button"onclick="a()"value="bom学习2" />
+        <input type="button" onclick="a2()"value="ceshier" /> 
+        <input type="button"onclick="a3()" value="后退"/>
+        <input type="button"onclick="na()"value="navigator"/>
+	</body>
+</html>

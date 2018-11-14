@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script>
+			
+			function a1(){
+				var a=document.getElementById("div1");
+				var b=a.innerHTML;
+				var c=a.innerText;
+				a.innerHTML="andfkl;kafa;';fal;lálzf";//操作节点的对象
+				a.innerText="我是哈登";
+				alert(b);
+				alert(c);
+				
+				
+				
+			}
+		</script>
+		
+		<div id="div1">
+			大家好，我是渣渣辉，我是古天乐，你到底是谁？
+		</div>
+		<input type="button"onclick="a1()"value="旨在" />
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script>
+			function date1(){
+				
+				var da=new Date();
+				alert(da.getYear());//1900到现在的年份差值
+				alert(da.getDate());
+				alert(da.getDay());
+				
+			}
+			
+			function string1(){
+				var st="nihao-案卷-java-nihoa";
+				//alert(st.substr(1,4));//包含第四个
+				//alert(st.substring(1,4));//不包含第四个
+				var stt=st.split("-");
+				alert(stt);
+			}
+			function math1(){
+				var sr=Math.random();
+				alert(Math.floor(sr*9000+1000));//向下取证
+			}
+			//string1();
+			//math1();
+			function global1(){
+				var a="c=2";
+				eval(a);
+				alert(c);
+				alert(eval("1+2"));
+				alert("1+2");
+				alert(parseInt("a123aaaba"))
+				alert(isNaN("123"));
+				
+				
+			}
+			global1();
+		</script>
+		<input type="button"onclick="date1()"value="date测试" />
+	</body>
+</html>

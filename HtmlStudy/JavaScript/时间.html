@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body onload="a5()">
+		
+		<script>
+			function a5(){
+				alert("我是 onload");
+			}
+			function a1(){
+				alert("快走，别管我，去拯救世界");
+			}
+			function a2(){
+				alert("好的");
+			}
+				
+					var a=0;
+			 function a3(){
+			 	//alert(" 我移动了");
+			 
+			 	document.getElementById("div1").innerHTML= a++
+			 }
+			 var b=1;
+			  function test6(){
+			  	
+			  	document.getElementById("div2").innerHTML=b++;
+			  }
+			  function a3(){
+			  	alert("应户名不合法");
+			  	
+			  }
+		</script>
+		
+		
+		<div style="width: 200px; height: 200px; border: 1px solid royalblue; " onmousemove="a3()" id="div1"></div>
+		
+		<div  style="width: 100px;height: 100px;border: 1px solid red;"  onmouseover="a1()" onmouseout="a2()"></div>
+		<input  type="button"onclick="a1()"value="点击事件"/>
+		<input type="button"  ondblclick="a2()" value="双击事件" />
+		<input type="text" onkeyup="test6()" /><span id="div2"></span>
+		
+		账号：<input type="text" onblur="a3()" />  
+		密码：<input type="text" onfocus="a3()" />
+	</body>
+</html>

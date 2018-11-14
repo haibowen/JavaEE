@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<h2 align="center">注册页面</h2>
+		<hr />
+		
+		<style>
+			#a1{
+				width: 60px;
+				height: 30px;
+			}
+			#sp1{
+				width: 60px;
+				height: 30px;
+			}
+			
+			
+		</style>
+		<script>
+			function yzm(){
+				var a=Math.floor(Math.random()*9000+1000) ;
+				var b=document.getElementById("sp1");
+				b.innerHTML=a; 
+				b.style.backgroundImage="url(http://pic.58pic.com/58pic/12/31/88/25i58PICtVW.jpg)";
+				
+			}
+			function sub(){
+				return checkname()&&checkzhanghao()&&checkpwd()&&checkyzm()&&fuwu();
+			}
+			
+			function checkname(){
+				var a1=/^[\u4e00-\u9fa5]{2,4}$/;
+				return zhengze(a1,"username");
+			}
+			
+			function checkzhanghao(){
+				var a2=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+				 return zhengze(a2,"userzhanghao");
+				
+			}
+			function checkpwd(){
+				var a3=/^[a-zA-Z]\w{5,17}$/;
+				 return zhengze(a3,"userpwd");
+			}
+			function checkyzm(){
+				var a=document.getElementById("sp1");
+				var b=document.getElementById("a1");
+				if(a.innerHTML==b.value){
+					return true;
+				}else{
+					return false;
+				}
+					
+				
+			}
+			function fuwu(){
+				var a=document.getElementById("tijiao");
+				if(!a.checked){
+					return false;
+				}else{
+					return true;
+				}
+				
+			}
+			
+			//通用的 方法
+			function zhengze(b,name){
+				//获得文本对象
+				var a=document.getElementById(name);
+				//正则中文验证
+				var re=b;
+				//var b=/^[\u4e00-\u9fa5]{2,4}$/ ;
+				//var c=a.textContent;
+				if(a.value==""||a.value==null){
+					var d=document.getElementById("sp"+name);
+					d.innerHTML=a.alt+"不能为空";
+					d.style.color="red";
+					return false;
+					
+				}else if(!b.test(a.value)){
+					var d=document.getElementById("sp"+name);
+					d.innerHTML=a.alt+"不合法";
+					d.style.color="red";
+					return false;
+					
+				}else{
+					
+					var d=document.getElementById("sp"+name);
+					d.innerHTML=a.alt+"合法";
+					d.style.color="green";
+				    return true;
+				}
+				
+				
+			}
+		</script>
+		
+		
+	</head>
+	<body onload="yzm()" background="img/beijing.jpg">
+		<form action="study.html" method="get" onsubmit="return sub()" >
+		
+		<div align="center">
+		姓名：<input type="text" id="username"  alt="用户名"  onblur="checkname()"/><span id="spusername"></span><br/><br/>
+		邮箱：<input type="text" id="userzhanghao" alt="邮箱" onblur="checkzhanghao()"/><span id="spuserzhanghao"></span><br/><br/>
+		密码：<input type="text" id="userpwd" alt="密码" onblur="checkpwd()"/><span id="spuserpwd"></span><br/><br/>
+	       验证码：<input type="text" id="a1" onblur="checkyzm()"/>&nbsp;&nbsp;&nbsp;<span id="sp1"  onclick="yzm()"></span><br/><br/>
+		籍贯：<select>
+			<option>上海</option>
+			<option>重庆</option>
+			<option>北京</option>
+			<option>湖南</option>
+			<option>长沙</option>
+		
+			
+		</select><br />
+		描述：<textarea cols="40" rows="10"></textarea><br />
+		<input type="checkbox" id="tijiao" onclick=""/><span>同意本公司的业务需求 </span><br />
+		<input type="submit"value="注册" />
+		</div>
+		</form>
+	</body>
+</html>

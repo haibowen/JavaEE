@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		
+		<script>
+			
+			function changebackground(th){
+				var a=document.getElementById("show");
+				
+					a.style.backgroundImage="url("+th.src+")";	
+				
+					
+				
+			}
+		</script>
+	</head>
+	<body>
+		<table border="1px">
+			<tr>
+				<td colspan="5"  ><img src="img/a.jpg" id="show"><img/></td>
+			</tr>
+			<tr>
+				<td><img src="img/a1.png" id="a1" onmousemove="changebackground(this)"/></td>
+				<td><img src="img/b.png" id="a2" onmousemove="changebackground(this)"/></td>
+				<td><img src="img/c.png" id="a3"  onmousemove="changebackground(this)"/></td>
+				<td><img src="img/d.png"id="a4" onmousemove="changebackground(this)"/></td>
+			</tr>
+		</table>
+		
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

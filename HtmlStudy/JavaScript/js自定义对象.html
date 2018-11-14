@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			//定义类的方法
+			function  google(sex,name){
+				this.sex=sex;
+				this.name=name;
+				this.age=12 ;
+				
+				this.dra=function(){
+					alert("我是一个方法");
+				}
+				
+				
+				
+				
+			}
+			//var google1=new google("123456789");
+			//alert(google1.sex);
+			//google1.look="看电影";
+			//alert(google1.look);
+			function a1(){
+				
+				
+				this.eat=function(){
+					alert("你傻还是我傻");
+				}
+			}
+			
+			google.prototype=new a1();
+			
+			var aaa=new google()
+			
+			
+			alert(aaa.eat());
+			
+			
+		</script>
+		
+		
+		<div >
+			<h1>我是定义的盒子</h1>
+			
+			
+		</div>
+	</body>
+</html>

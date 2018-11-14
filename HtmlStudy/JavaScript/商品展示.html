@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div{
+				width: 480px;
+				height: 320px;
+				border: 1px solid red;
+				
+				
+			}
+		   #a1,#a2,#a3,#a4{
+				width: 100px;
+				height: 100px;
+				
+				
+			}
+			li{
+				list-style: none;
+				float: left;
+				padding-left: 10px;
+				 
+			
+				
+				
+			}
+			
+			
+			
+		</style>
+		<script>
+			
+			function change1(th){
+				var a=document.getElementById("div1");
+				a.style.backgroundImage="url("+th.src+")";
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="div1">
+			
+		</div>
+		<ul>
+			<li><img src="img/Aerial01.jpg" alt="" id="a1" onmousemove="change1(this)"/>	</li>
+			<li><img src="img/Aerial02.jpg" alt="" id="a2" onmousemove="change1(this)"/>	</li>
+			<li><img src="img/Cosmos03.jpg" alt="" id="a3"onmousemove="change1(this)"/>	</li>
+			<li><img src="img/NatGeo03.jpg" alt="" id="a4"onmousemove="change1(this)"/>	</li>
+		</ul>
+		
+		
+		
+	</body>
+</html>

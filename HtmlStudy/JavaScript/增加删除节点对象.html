@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		
+		
+		<script>
+			function a1(){
+				var a=document.getElementById("div1");
+				//添加节点对象
+				var inp=document.createElement("input");
+				var inp1=document.createElement("br");
+				//指定创建对象的type对象
+				inp.type="text";
+				var inp2=document.createElement("input");
+				inp2.type="button";
+				inp2.value="删除";
+				//子节点添加到父节点
+				a.appendChild(inp);
+				a.appendChild(inp2);
+				a.appendChild(inp1);
+				inp2.onclick=function(){
+					var a1= document.getElementById("div1");
+				a1.removeChild(inp+inp1+inp2);
+				//a1.removeChild(inp1);
+				//a1.removeChild(inp2);
+				}
+				function a2(){
+				
+			}
+			
+				
+				
+				
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="button" value="添加" onclick="a1()"/>
+		<div id="div1">
+			
+		</div>
+		
+		
+	</body>
+</html>

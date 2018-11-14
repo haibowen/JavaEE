@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			span{
+				width:200px;
+				height: 200px;
+				border: 1px solid red;
+				display: block;// 行内元素转化为块级元素
+			}
+			#div1{
+				height: 200px;
+				width: 200px;
+				background-color: red;
+				float: right;
+			}
+			#div2{
+				height: 200px;
+				width: 200px;
+				background-color: yellow;
+				float: right;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<p>块级元素</p>
+		<hr/>
+		<span>123</span>
+		
+		<div id="div1">123</div>
+		<div id="div2">123</div>
+		<div id="div3">123</div>
+		
+	</body>
+</html>
+<!--
+        	作者：offline
+        	时间：2018-03-25
+        	描述：会不会自动换行 块级元素 {div  p   h}
+        	行内元素  不会独自占据一行{ a  span  font }
+        -->

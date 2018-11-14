@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			img{
+				width: 150px;
+				height: 150px;
+				border: 1px;
+			}
+			li{
+				list-style: none;
+			}
+		</style>
+	</head>
+	<body id="bo">
+		<script>
+			
+			function change(th){
+				var a=document.getElementById("bo");
+				a.style.backgroundImage="url("+th.src+")";//注意url图片地址的正确拼接
+				//a.style.backgroundImage="th.src";
+				
+				
+			}
+		</script>
+		
+		
+		<ul>
+			
+			<li><img src="img/Aerial01.jpg"  onclick="change(this)"></img></li>
+			<li><img src="img/Aerial02.jpg" onclick="change(this)"></img></li>
+			<li><img src="img/Cosmos03.jpg"onclick="change(this)"></img></li>
+			<li><img src="img/NatGeo03.jpg"onclick="change(this)"></img></li>
+		</ul>
+		
+		
+	</body>
+</html>
